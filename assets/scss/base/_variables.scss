@@ -1,0 +1,65 @@
+// Breakpoints
+$medium-screen: 600px;
+$large-screen: 900px;
+
+// Typography
+ $base-font-family: $font-stack-system;
+//$base-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$heading-font-family: $base-font-family;
+
+// 自定义
+$base-font-size: 1em;
+
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+// $base-border-radius: 3px;
+$base-border-radius: .52em;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+$blue: #1565c0;
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #ddd;
+// 自定义
+$primary-color: #ec2028;
+$white-color: #fff;
+$black-color: #000;
+$blue-color: #477dca;
+$dark-gray-color: #333;
+$medium-gray-color: #999;
+$light-gray-color: #ccc;
+//自己的
+$yellow-color: #aaaa00;
+$green-color: #22b14c;
+
+// Font Colors
+// $base-font-color: $dark-gray;
+$base-font-color: rgba($dark-gray-color, .8);
+// $action-color: $blue;
+$action-color: $primary-color;
+
+// Border
+// $base-border-color: $light-gray;
+$base-border-color: $light-gray-color;
+$base-border: 1px solid $base-border-color;
+
+// Background Colors
+$base-background-color: #fff;
+$secondary-background-color: tint($base-border-color, 75%);
+
+// Focus
+$focus-outline-color: transparentize($action-color, 0.4);
+$focus-outline-width: 3px;
+$focus-outline: $focus-outline-width solid $focus-outline-color;
+$focus-outline-offset: 2px;
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;

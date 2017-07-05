@@ -1,0 +1,8 @@
+//第一步:新建_sass目录并增加.scss文件.下面文件是.scss的内容
+
+//由于github上不支持bourbon，所以通过本地安装然后push的，所以导入bourbon的时候要修改路径。
+@import "bourbon/bourbon";
+@import "reset";
+@import "base/base";
+
+@import "custom/syntax-highlighting";

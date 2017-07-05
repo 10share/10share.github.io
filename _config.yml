@@ -1,0 +1,30 @@
+#SEO 设置
+title: onepan
+
+#作者信息
+author:
+    name    : onepan
+    job     : 无业游民
+    bio     : "不知道"
+    
+
+#开启jekyll自带的sass编译器
+#并设置sass文件的源路径和编译样式
+sass:
+    sass_dir:   assets/scss
+    style:      compressed # expanded
+    
+#设置jekyll编译时的源目录和生成的站点目录，在github不支持可以注释掉
+#source: source
+#destination: _site
+
+#开启jekyll自带的分页功能
+paginate:   4
+paginate_path: "/page/:num/"
+
+
+
+#添加gems，bourbon不是github支持的插件，可以注释掉
+gems:
+ #   - bourbon
+    - jekyll-paginate

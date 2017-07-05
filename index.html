@@ -1,0 +1,35 @@
+---
+layout: default
+title: 首页
+---
+
+{% include intro.html %}
+
+<section class="post-list">
+	<div class="container">
+		<h2>文章列表</h2>
+
+		{% for post in paginator.posts %}
+			<article class="post-item">
+				<p>
+					<span class="post-meta">
+						{{ post.date | date: "%b %-d, %Y" }}
+					</span> —
+					<strong>
+						{% if page.categories == 'original' %}<span>原创</span>{% else %}<span>转载</span>{% endif %}
+						<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+					</strong> —
+					<span>
+						{{ post.excerpt }}
+					</span>
+					<a class="post-link readmore" href="{{ post.url | prepend: site.baseurl }}">阅读更多</a>
+				</p>
+			</article>
+		{% endfor %}
+	</div>
+
+	<div class="container">
+		{% include pagination.html %}
+
+	</div>
+</section>

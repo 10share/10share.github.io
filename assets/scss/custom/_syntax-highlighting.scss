@@ -1,0 +1,115 @@
+/*
+	Syntax highlighting styles
+*/
+
+//代码高亮整体
+.highlight{
+	//上下外边距为基本间距，左右没边距.
+	//没有内边距
+	//设置阴影 黑色。。
+	margin: $base-spacing 0;
+	padding: 0;
+	box-shadow: 0px 0px 2px rgba($black-color,.1);
+
+	//针对不同的代码高亮样式设置背景颜色
+	.highlight-rouge &,&,.hll,pre,code{
+		background-color: lighten($light-gray-color, 13%) !important;
+	}
+
+	pre{
+		//没有外边距
+		//内边距四边都是基本间距
+		margin: 0;
+		padding: $base-spacing;
+
+		//保留空白键,行高
+		//如果两边溢出则提供滚动
+		//没有下外边距
+		//规定自动换行
+		white-space: pre;
+		line-height: 23px;
+		overflow-x: auto;
+		margin-bottom: 0;
+		word-break: inherit;
+		word-wrap: inherit;
+
+		//对pre和pre code 设置颜色
+		&,code{
+			color: $base-font-color;
+		}
+
+		//保留空白键
+		//无内边距
+		code{
+			white-space: pre;
+			padding: 0 !important;
+
+			//这是设置全部孩子内部都不换行
+			*{
+				white-space: nowrap;
+			}
+		}
+	}
+
+	//这是代码经拆分后的高亮样式
+	//主要设置了字体颜色，字体样式，字体粗细
+	.c     { color: #998; font-style: italic } // 注释
+	.err   { color: #a61717; background-color: #e3d2d2 } // 错误
+	.k     { font-weight: bold } // 关键字
+	.o     { font-weight: bold } // 操作
+	.cm    { color: #998; font-style: italic } // 多行注释
+	.cp    { color: #999; font-weight: bold } // 预处理注释
+	.c1    { color: #998; font-style: italic } // 单注释
+	.cs    { color: #999; font-weight: bold; font-style: italic } // 特别的注释
+	.gd    { color: #000; background-color: #fdd } // 常见的删除
+	.gd .x { color: #000; background-color: #faa } // 常见的指定删除
+	.ge    { font-style: italic } // 常见的重点
+	.gr    { color: #a00 } // 常见的错误
+	.gh    { color: #999 } // 常见的标题
+	.gi    { color: #000; background-color: #dfd } // 常见的插入
+	.gi .x { color: #000; background-color: #afa } // 常见的指定插入
+	.go    { color: #888 } // 常见的输出
+	.gp    { color: #555 } // 常见的提示
+	.gs    { font-weight: bold } // 常见的Strong
+	.gu    { color: #aaa } // 常见的Subheading
+	.gt    { color: #a00 } // 常见的Traceback
+	.kc    { font-weight: bold } // 常量字
+	.kd    { font-weight: bold } // 声明字
+	.kp    { font-weight: bold } // 伪关键字
+	.kr    { font-weight: bold } // 保留字
+	.kt    { color: #458; font-weight: bold } // Keyword.Type
+	.m     { color: #099 } // 数字(部分)
+	.s     { color: #d14 } // 字符串(部分)
+	.na    { color: #008080 } // 属性名
+	.nb    { color: #0086B3 } // 执行内建的函数
+	.nc    { color: #458; font-weight: bold } // 类名
+	.no    { color: #008080 } // 常量名
+	.ni    { color: #800080 } // 实体名
+	.ne    { color: #900; font-weight: bold } // 例外名
+	.nf    { color: #900; font-weight: bold } // 函数名
+	.nn    { color: #555 } // 命名空间名
+	.nt    { color: #000080 } // 标签名
+	.nv    { color: #008080 } // 变量名
+	.ow    { font-weight: bold } // 字操作
+	.w     { color: #bbb } // 空白文本
+	.mf    { color: #099 } // 浮点数(部分)
+	.mh    { color: #099 } // 16进制数(部分)
+	.mi    { color: #099 } // 十进制数(部分)
+	.mo    { color: #099 } // 八进制数(部分)
+	.sb    { color: #d14 } // Backtick字符串(部分)
+	.sc    { color: #d14 } // 字符串(部分)
+	.sd    { color: #d14 } // 文档字符串(部分)
+	.s2    { color: #d14 } // 双引号(部分)
+	.se    { color: #d14 } // 转义序列(部分)
+	.sh    { color: #d14 } // Here document(部分)
+	.si    { color: #d14 } // 插入指令(部分)
+	.sx    { color: #d14 } // 其他字符串(部分)
+	.sr    { color: #009926 } // 正则表达式字符串(部分)
+	.s1    { color: #d14 } // 单引号符
+	.ss    { color: #990073 } // 符号字符串(部分)
+	.bp    { color: #999 } // 伪内建名称
+	.vc    { color: #008080 } // 类变量名称
+	.vg    { color: #008080 } // 全局变量名称
+	.vi    { color: #008080 } // 可变实例名称
+	.il    { color: #099 } // 长整型数字(部分)
+}
